@@ -31,12 +31,15 @@ ggplot(data = pie_crab, aes(x = size, y = latitude)) +
 ```{r}
 
 crab_df <- pie_crab %>%
-  group_by(size) %>%
-  summarise(size_mean = mean(size, na.rm = TRUE), size_sd = sd(size), count = n())
+  mutate(size_mean = round(mean(size, na.rm= TRUE), 2), size_sd = round(sd(size), 2), count = n())
+
+
+crab_df_small <- crab_df %>%
+  select(size_mean, size_sd, count) 
+
+crab_summary <- head(crab_df_small, 1)
 
 ```
-
-
 
 
 
