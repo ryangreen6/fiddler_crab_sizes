@@ -1,0 +1,46 @@
+---
+title: "lterdatasampler"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(usethis)
+library(metajam)
+library(lterdatasampler)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
