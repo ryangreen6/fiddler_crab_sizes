@@ -1,24 +1,57 @@
 ---
 title: "lterdatasampler"
 format: html
+execute:
+  warning: false
+  echo: false
 editor: visual
 editor_options: 
   chunk_output_type: console
 ---
 
 ```{r}
+#| include: false
 library(tidyverse)
 library(lubridate)
 library(janitor)
 library(usethis)
 library(lterdatasampler)
-
+library(dograt)
 ```
 
 ```{r}
+
 ggplot(data = pie_crab, aes(x = size, y = latitude)) +
-  geom_point()
+  geom_point() +
+  theme_eighties() +
+  labs(caption = "pie crabz")
+  
 ```
+
+```{r}
+
+crab_df <- pie_crab %>%
+  group_by(size) %>%
+  summarise(size_mean = mean(size, na.rm = TRUE), size_sd = sd(size), count = n())
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
